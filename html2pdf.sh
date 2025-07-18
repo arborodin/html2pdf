@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# A script to automatically generate pdf Neovim documentation from the html files.
+# A shellscript to automatically generate pdf Neovim documentation from the html files.
+#This is a fork. The original script is by Jockl132 located at 'https://www.reddit.com/r/neovim/comments/cpsb7s/comment/ewsf0k0/'
 
 main_dir="file-documentation"
 html_dir="pages-html"
@@ -29,4 +30,5 @@ echo "Stitching the files into a document..."
 pdfunite $pdf_dir/* pages-compilation.pdf
 echo "Stitching completed."
 
+# Ridding of redundancy;
 find . -not \( -name "*.html" -or -name "*.tex" -or -name "*.pdf" \) -type f -delete
